@@ -9,7 +9,8 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "pretty-quick --staged"
     }
   },
   "config": {
@@ -26,7 +27,15 @@
     "@commitlint/cli": "7.0.0",
     "@commitlint/config-conventional": "7.0.1",
     "cz-conventional-changelog": "2.1.0",
+    "babel-eslint": "8.2.6",
+    "eslint": "5.1.0",
+    "eslint-config-last": "0.0.5",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-prettier": "2.6.2",
+    "eslint-plugin-react": "7.10.0",
     "husky": "~1.0.0-rc.13",
+    "prettier": "1.13.7",
+    "pretty-quick": "1.6.0",
     "standard-version": "4.4.0"
   }
 }
