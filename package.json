@@ -4,6 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start": "razzle start",
+    "build": "razzle build",
+    "test": "razzle test --env=jsdom",
+    "start:prod": "NODE_ENV=production node build/server.js",
     "commit": "git-cz",
     "release": "standard-version"
   },
@@ -23,17 +27,26 @@
       "@commitlint/config-conventional"
     ]
   },
+  "dependencies": {
+    "@jaredpalmer/after": "latest",
+    "express": "^4.16.2",
+    "razzle": "^2.2.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
+  },
   "devDependencies": {
     "@commitlint/cli": "7.0.0",
     "@commitlint/config-conventional": "7.0.1",
-    "cz-conventional-changelog": "2.1.0",
     "babel-eslint": "8.2.6",
+    "cz-conventional-changelog": "2.1.0",
     "eslint": "5.1.0",
     "eslint-config-last": "0.0.5",
     "eslint-config-prettier": "2.9.0",
     "eslint-plugin-prettier": "2.6.2",
     "eslint-plugin-react": "7.10.0",
     "husky": "~1.0.0-rc.13",
+    "lighthouse": "3.0.3",
     "prettier": "1.13.7",
     "pretty-quick": "1.6.0",
     "standard-version": "4.4.0"
