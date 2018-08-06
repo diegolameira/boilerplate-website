@@ -52,6 +52,7 @@ const Feed = ({ feed }) => (
 const Feeds = ({ feeds, url: { pathname, query } }) => (
   <div>
     <ul>{feeds.map(f => <Feed key={f.id} feed={f} />)}</ul>
+    <h3>{process.env.TEST}</h3>
     <style jsx>{`
       ul {
         padding: 0;

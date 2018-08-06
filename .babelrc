@@ -4,12 +4,14 @@
     ],
   "env": {
     "development": {
+      "plugins": ["inline-dotenv"],
       "presets": [
         "next/babel",
         "@zeit/next-typescript/babel"
       ]
     },
     "production": {
+      "plugins": ["transform-inline-environment-variables"],
       "presets": [
         "next/babel",
         "@zeit/next-typescript/babel"
