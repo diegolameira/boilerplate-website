@@ -1,6 +1,10 @@
 {
   "plugins": [
       "@babel/plugin-transform-runtime",
+      ["module-resolver", {
+        "root": ["./"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".es", ".es6", ".mjs"],
+      }],
       [
         "styled-components",
         {

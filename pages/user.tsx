@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
-import fetch from '../lib/fetch';
-import Page from '../components/page';
+import fetch from 'lib/fetch';
+import Page from 'components/page';
 
 const User = ({ user }) => (
   <div>
