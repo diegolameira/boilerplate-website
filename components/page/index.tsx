@@ -26,6 +26,14 @@ export default ({ children }) => (
       {['news', 'newest', 'ask', 'jobs'].map(m => (
         <Menu key={m} href={`/${m}`} label={m.toUpperCase()} />
       ))}
+      |
+      <StyledLink
+        onClick={() => {
+          console.error('another error on console');
+          throw new Error('Houston, we have a problem');
+        }}
+        children={'ERROR DISPATCHER'}
+      />
     </nav>
     <div>{children}</div>
     <style global jsx>{`
