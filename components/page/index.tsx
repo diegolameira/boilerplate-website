@@ -1,21 +1,22 @@
+import styled from 'styled-components';
 import Link from 'next/link';
 
+const StyledLink = styled.span`
+  padding: 6px 4px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+`;
+
 const Menu = ({ href, label }) => (
-  <span>
+  <StyledLink>
     <Link href={href}>
       <a>{label}</a>
     </Link>
-    <style jsx>{`
-       {
-        padding: 6px 4px;
-      }
-      a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 16px;
-      }
-    `}</style>
-  </span>
+  </StyledLink>
 );
 
 export default ({ children }) => (
