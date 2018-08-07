@@ -14,7 +14,6 @@ export default class extends App {
       release: PACKAGE.version,
       environment: NODE_ENV
     }).install();
-    debugger;
   }
 
   componentDidCatch(error, errorInfo) {
