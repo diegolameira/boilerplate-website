@@ -23,7 +23,7 @@ export default ({ children }) => (
   <main>
     <nav>
       <Menu href={'/'} label={'HOMEZEE'} />
-      {['news', 'newest', 'ask', 'jobs'].map(m => (
+      {['news', 'newest', 'ask', 'jobs', 'redux'].map(m => (
         <Menu key={m} href={`/${m}`} label={m.toUpperCase()} />
       ))}
       |
