@@ -16,7 +16,7 @@ export const loadPeople = action('LOAD_PEOPLE', state => state);
 export const loadPeopleSuccess = action(
   'LOAD_PEOPLE_SUCCESS',
   (state, { results }) => {
-    return { ...state, people: results };
+    return { ...state, items: results };
   }
 );
 

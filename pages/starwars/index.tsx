@@ -1,67 +1,52 @@
-import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import styled from 'styled-components';
+import { bindActionCreators } from 'redux';
+import {
+  compose,
+  setDisplayName,
+  lifecycle,
+  withProps,
+  mapProps,
+  pure
+} from 'recompose';
 
 import { reduxPage } from 'redux/store';
-import Page from 'components/page';
 
-import mapStateToProps, { loadPeople } from './actions';
-
-interface Props {
-  loadPeople: () => void;
-  people: any[];
-}
-
-class Comp extends Component<Props> {
-  componentDidMount() {
-    this.props.loadPeople();
-  }
-  render() {
-    const { people } = this.props;
-    return (
-      <Page>
-        <h1>Start wars characters</h1>
-        <React.Fragment>
-          {people.map(person => <Card key={person.url} {...person} />)}
-        </React.Fragment>
-      </Page>
-    );
-  }
-}
+import { people } from './service';
+import initialState, { loadPeople } from './actions';
+import Page from './Page';
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ loadPeople }, dispatch);
 }
 
-const StarWarsPage = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Comp);
+const Container = compose(
+  setDisplayName('StarWarsPage'),
+  withProps({
+    title: 'Star Wars Page'
+  }),
+  mapProps(({ title, people }) => ({
+    title,
+    items: people || []
+  })),
+  connect(
+    initialState,
+    mapDispatchToProps
+  ),
+  lifecycle({
+    componentDidMount() {
+      // NOTE: server is sending items, if any then load
+      if (this.props.items && !this.props.items.length) this.props.loadPeople();
+    }
+  }),
+  pure
+)(Page);
 
-export default reduxPage(StarWarsPage);
+Container.getInitialProps = async ({ store, isServer }) => {
+  // TODO: better to use actions/redux
+  const promise = await people().then(response => ({
+    people: response.results
+  }));
+  return promise;
+};
 
-const Card = ({ name, height, birth_year, gender }) => (
-  <CardWrapper>
-    <h1>{name}</h1>
-    <ul>
-      {Object.entries({
-        height,
-        birth_year,
-        gender
-      }).map((item, key) => (
-        <li key={key}>
-          <strong>{item[0]}</strong>
-          <span>{item[1]}</span>
-        </li>
-      ))}
-    </ul>
-  </CardWrapper>
-);
-
-const CardWrapper = styled.div`
-  margin: 10px;
-  padding: 20px;
-  box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.6);
-  border-radius: 6px;
-`;
+export default reduxPage(Container);

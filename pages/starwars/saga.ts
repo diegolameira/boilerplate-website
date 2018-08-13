@@ -14,7 +14,7 @@ function* loadPeople() {
 }
 
 function* sagas() {
-  yield all([takeLatest(new loadPeopleAction().type, loadPeople)]);
+  yield all([takeLatest(loadPeopleAction().type, loadPeople)]);
 }
 
 export default sagas;
