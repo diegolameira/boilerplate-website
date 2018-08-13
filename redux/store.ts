@@ -5,6 +5,8 @@ import createSagaMiddleware from 'redux-saga';
 import { createLogger } from 'redux-logger';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
+import rootSaga from './sagas';
+
 const initialState = {
   count: 0
 };
@@ -26,11 +28,11 @@ export const initStore = (state = initialState) => {
     bindMiddlewares([sagaMiddleware])
   );
 
-  // store.runSagaTask = () => {
-  // store.sagaTask = sagaMiddleware.run(rootSaga);
-  // };
+  store.runSagaTask = () => {
+    store.sagaTask = sagaMiddleware.run(rootSaga);
+  };
 
-  // store.runSagaTask();
+  store.runSagaTask();
 
   return store;
 };
