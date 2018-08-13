@@ -7,7 +7,6 @@ import { reduxPage } from 'redux/store';
 import Page from 'components/page';
 
 import mapStateToProps, { loadPeople } from './actions';
-import { render } from 'react-dom';
 
 interface Props {
   loadPeople: () => void;
