@@ -55,19 +55,24 @@ Explain what these tests test and why
 Give an example
 ```
 
+## Commiting
+
+- Standard Commits
+- Commitzen
+
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+- [NextJS](https://nextjs.org/) - The React Framework for SSR
+- [Prettier](https://prettier.io/) - Code formatter
+- [Jest](https://jestjs.io/) - JavaScript Testing
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
@@ -75,7 +80,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -85,6 +90,26 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## TODO
+
+- [ ] Playkit
+- [x] [Bundle Analyzier](https://github.com/zeit/next.js/tree/canary/examples/analyze-bundles)
+- [ ] [Jest](https://github.com/zeit/next.js/tree/canary/examples/with-jest)
+- [ ] [GAnalytics](https://github.com/zeit/next.js/tree/canary/examples/with-google-analytics)
+- [ ] [Segment](https://github.com/zeit/next.js/tree/canary/examples/with-segment-analytics)
+- [ ] [Error Tracking](https://github.com/zeit/next.js/tree/canary/examples/with-sentry)
+- [ ] [Loading](https://github.com/zeit/next.js/tree/canary/examples/with-loading)
+- [ ] [Docker](https://github.com/zeit/next.js/tree/canary/examples/with-docker)
+- [ ] [Layout](https://github.com/zeit/next.js/tree/canary/examples/with-dynamic-app-layout)
+- [ ] [SEO](https://github.com/zeit/next.js/tree/canary/examples/with-next-seo)
+- [ ] [Prefetching](https://github.com/zeit/next.js/tree/canary/examples/with-prefetching)
+- [ ] [Manifest](https://github.com/diegolameira/boilerplate-website/blob/feature/nextjs/pages/_document.tsx)
+- [ ] [SW](https://github.com/diegolameira/boilerplate-website/blob/feature/nextjs/pages/_document.tsx)
+- [ ] [AMP](https://github.com/zeit/next.js/tree/canary/examples/amp)
+- [ ] [HOC](https://github.com/zeit/next.js/blob/canary/examples/with-higher-order-component)
+- [ ] [ContextAPI](https://github.com/zeit/next.js/blob/canary/examples/with-context-api)
+- [ ] [GraphQL-hooks](https://github.com/zeit/next.js/tree/canary/examples/with-graphql-hooks)

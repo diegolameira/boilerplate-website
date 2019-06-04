@@ -1,11 +1,17 @@
 {
-  "name": "boilerplate-website",
+  "name": "boilerplate-next",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "commit": "git-cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "analyze": "BUNDLE_ANALYZE=both next build",
+    "analyze:server": "BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "BUNDLE_ANALYZE=browser next build"
   },
   "husky": {
     "hooks": {
@@ -24,18 +30,29 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "7.0.0",
-    "@commitlint/config-conventional": "7.0.1",
+    "@commitlint/cli": "^7.6.1",
+    "@commitlint/config-conventional": "7.6.0",
+    "@zeit/next-bundle-analyzer": "^0.1.2",
+    "babel-eslint": "10.0.1",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-styled-components": "^1.10.0",
     "cz-conventional-changelog": "2.1.0",
-    "babel-eslint": "8.2.6",
-    "eslint": "5.1.0",
+    "dotenv-webpack": "^1.7.0",
+    "eslint": "^5.16.0",
     "eslint-config-last": "0.0.5",
-    "eslint-config-prettier": "2.9.0",
-    "eslint-plugin-prettier": "2.6.2",
-    "eslint-plugin-react": "7.10.0",
-    "husky": "~1.0.0-rc.13",
-    "prettier": "1.13.7",
-    "pretty-quick": "1.6.0",
-    "standard-version": "4.4.0"
+    "eslint-config-prettier": "4.3.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.13.0",
+    "husky": "~2.3.0",
+    "prettier": "1.17.1",
+    "pretty-quick": "1.10.0",
+    "standard-version": "6.0.1"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.2.1"
   }
 }
