@@ -98,7 +98,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 - [ ] Playkit
 - [x] [Bundle Analyzier](https://github.com/zeit/next.js/tree/canary/examples/analyze-bundles)
-- [ ] [Jest](https://github.com/zeit/next.js/tree/canary/examples/with-jest)
+- [x] [Jest](https://github.com/zeit/next.js/tree/canary/examples/with-jest)
 - [ ] [GAnalytics](https://github.com/zeit/next.js/tree/canary/examples/with-google-analytics)
 - [ ] [Segment](https://github.com/zeit/next.js/tree/canary/examples/with-segment-analytics)
 - [ ] [Error Tracking](https://github.com/zeit/next.js/tree/canary/examples/with-sentry)
