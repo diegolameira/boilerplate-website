@@ -100,7 +100,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 - [x] [Bundle Analyzier](https://github.com/zeit/next.js/tree/canary/examples/analyze-bundles)
 - [x] [Jest](https://github.com/zeit/next.js/tree/canary/examples/with-jest)
 - [x] [GAnalytics](https://github.com/zeit/next.js/tree/canary/examples/with-google-analytics)
-- [ ] [Layout](https://github.com/zeit/next.js/tree/canary/examples/with-dynamic-app-layout)
+- [x] [Layout](https://github.com/zeit/next.js/tree/canary/examples/with-dynamic-app-layout)
 - [ ] [SEO](https://github.com/zeit/next.js/tree/canary/examples/with-next-seo)
 - [ ] [Segment](https://github.com/zeit/next.js/tree/canary/examples/with-segment-analytics)
 - [ ] [Error Tracking](https://github.com/zeit/next.js/tree/canary/examples/with-sentry)

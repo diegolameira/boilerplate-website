@@ -3,6 +3,7 @@ import Router from 'next/router';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
+import Default from 'layouts/Default';
 import { pageview } from 'utils/analytic';
 
 const theme = {
@@ -26,10 +27,13 @@ export default class extends App {
 
   render() {
     const { Component, pageProps } = this.props;
+    const Layout = Component.Layout || Default;
     return (
       <Container>
         <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
         </ThemeProvider>
       </Container>
     );

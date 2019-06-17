@@ -41,6 +41,8 @@ const Index = ({ quotes }) => (
   </>
 );
 
+// Index.Layout = Layout;
+
 Index.getInitialProps = async () => {
   const quotes = await fetchBreakingBadQuotes();
   return {

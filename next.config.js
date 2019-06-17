@@ -1,3 +1,4 @@
+const withSass = require('@zeit/next-sass')
 require('dotenv').config();
 
 const withBundleAnalyzer = require('@zeit/next-bundle-analyzer');
@@ -39,4 +40,4 @@ const nextConfig = {
   }
 };
 
-module.exports = withBundleAnalyzer(nextConfig);
+module.exports = withBundleAnalyzer(withSass(nextConfig));

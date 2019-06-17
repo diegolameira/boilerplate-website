@@ -57,8 +57,11 @@
     "standard-version": "6.0.1"
   },
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "bulma": "^0.7.5",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^8.1.0",
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "styled-components": "^4.2.1"
