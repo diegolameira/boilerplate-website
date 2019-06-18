@@ -4,6 +4,8 @@ import NextSeo, * as JsonLds from 'next-seo';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
+import { ThemeProvider as GPlayKitThemeProvider } from 'playkit-with-theme';
+
 import DefaultLayout from 'layouts/Default';
 import { pageview } from 'utils/analytic';
 
@@ -37,11 +39,13 @@ export default class extends App {
         <NextSeo config={SEO} />
         {PageSEO ? <NextSeo config={PageSEO} /> : null}
         <JSONLDBuilder {...{ JSONLD }} />
-        <ThemeProvider theme={theme}>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </ThemeProvider>
+        <GPlayKitThemeProvider themeName="globoplay">
+          <ThemeProvider theme={theme}>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </ThemeProvider>
+        </GPlayKitThemeProvider>
       </Container>
     );
   }

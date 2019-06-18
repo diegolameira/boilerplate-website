@@ -7,6 +7,8 @@ import BreakingBadCharacter, {
 } from '../containers/BreakingBadCharacter';
 import ProfilePicture from '../components/ProfilePicture';
 
+import Button from 'components/Button';
+
 const QuoteWithPicture = quote => (
   <BreakingBadCharacter key={quote.quote} name={quote.author}>
     {props => (
@@ -25,7 +27,7 @@ const Index = ({ quotes }) => (
       {(_quotes, load) => (
         <>
           {(_quotes.length ? _quotes : quotes).map(QuoteWithPicture)}
-          <button onClick={() => load()}>Reload</button>
+          <Button onClick={() => load()}>Reload</Button>
         </>
       )}
     </BreakingBadQuote>
@@ -34,7 +36,7 @@ const Index = ({ quotes }) => (
       {(quotes, load) => (
         <>
           {quotes.map(QuoteWithPicture)}
-          <button onClick={() => load()}>Reload</button>
+          <Button onClick={() => load()}>Reload</Button>
         </>
       )}
     </BreakingBadQuote>
@@ -42,7 +44,7 @@ const Index = ({ quotes }) => (
 );
 
 // Index.Layout = Layout;
-// /*
+/*
 Index.SEO = {
   Page: {
     title: 'Page Meta Title',

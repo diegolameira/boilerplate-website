@@ -1,4 +1,5 @@
-const withSass = require('@zeit/next-sass')
+const withCSS = require('@zeit/next-css');
+const withSass = require('@zeit/next-sass');
 require('dotenv').config();
 
 const withBundleAnalyzer = require('@zeit/next-bundle-analyzer');
@@ -12,12 +13,12 @@ const nextConfig = {
   bundleAnalyzerConfig: {
     server: {
       analyzerMode: 'static',
-      reportFilename: '../bundles/server.html'
+      reportFilename: '../bundles/server.html',
     },
     browser: {
       analyzerMode: 'static',
-      reportFilename: '../bundles/client.html'
-    }
+      reportFilename: '../bundles/client.html',
+    },
   },
   webpack: config => {
     config.plugins = config.plugins || [];
@@ -28,16 +29,16 @@ const nextConfig = {
       // Read the .env file
       new Dotenv({
         path: path.join(__dirname, `_${process.env.NODE_ENV}.env`),
-        systemvars: true
+        systemvars: true,
       }),
       new Dotenv({
         path: path.join(__dirname, `_.env`),
-        systemvars: true
-      })
+        systemvars: true,
+      }),
     ];
 
     return config;
-  }
+  },
 };
 
-module.exports = withBundleAnalyzer(withSass(nextConfig));
+module.exports = withBundleAnalyzer(withCSS(withSass(nextConfig)));
